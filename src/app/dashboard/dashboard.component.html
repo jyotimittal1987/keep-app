@@ -1,0 +1,17 @@
+<div class="search-box">
+    <input type="text" name="search" id="" [(ngModel)]="searchText" placeholder="Search Note">
+    <button (click)="searchNote()">Search</button>
+</div>
+<div class="container">
+    <div *ngFor="let note of notes" class="note-card">
+            <h3>{{note?.title}}</h3>
+            <p>{{note?.content}}</p>
+    </div>
+</div>
+<div class="add-view">
+    <h4>Add New Note</h4>
+    <div class="note-field"><input type="text" name="id" [(ngModel)]="note.id" placeholder="Note Id"></div>
+    <div class="note-field"><input type="text" name="title" [(ngModel)]="note.title" placeholder="Note Title"></div>
+    <div class="note-field"><textarea cols="43" name="content" [(ngModel)]="note.content" placeholder="Note Content"></textarea></div>
+    <div><button (click)="addNote()">Save</button></div>
+</div>
