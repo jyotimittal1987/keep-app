@@ -21,13 +21,5 @@ export class DashboardComponent implements OnInit {
     if(this.searchText !== "")
       this.notes = this.notes.filter(note => note?.title?.includes(this.searchText));
   }
-  
-  addNote() {
-    if(this.note)
-      if(this.note.id !== 0 && this.note.title !== ""){
-        NOTES.push(this.note);
-        this.note = {};
-      }
-    
-  }
+
 }
